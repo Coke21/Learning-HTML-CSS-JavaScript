@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Million Dollar WebApp</title>
+
+	<style>
+		p {
+			color: red;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="our-div"></div>
+
+	<script>
+		var originalTitle = document.title;
+
+		function showUnreadCount(unread) 
+		{
+			document.title = originalTitle + " (" + unread + " new messages!)";
+		}
+
+		showUnreadCount(5);
+
+		var ourDiv = document.getElementById("our-div");
+		var newP = document.createElement("p");
+		var text = document.createTextNode("Hello, world!");
+
+		newP.appendChild(text);
+		ourDiv.appendChild(newP);
+
+	</script>
+</body>
+</html>
